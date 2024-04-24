@@ -19,8 +19,6 @@ final class Trajet
 
     public function __construct(Type $type, Escale ...$escale)
     {
-        assert(count($escale) > 1);
-
         $this->id = UuidV4::v4();
         $this->type = $type;
         $this->escales = $escale;
@@ -42,5 +40,10 @@ final class Trajet
     public function getArrets(): iterable
     {
         return array_slice($this->escales, 1, -1);
+    }
+
+    public function addEscale(Escale $escale): void
+    {
+        $this->escales[] = $escale;
     }
 }
