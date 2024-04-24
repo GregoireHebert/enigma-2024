@@ -8,7 +8,7 @@ use App\Models\Escale;
 use App\Models\Trajet;
 use App\Models\Type;
 
-final class TrajetInMemoryRepository
+final class TrajetInMemoryRepository implements TrajetRepositoryInterface
 {
     public function findAll(): iterable
     {
