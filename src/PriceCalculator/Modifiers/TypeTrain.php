@@ -19,7 +19,7 @@ class TypeTrain implements ModifierInterface
         };
     }
 
-    public function getPriority(): int
+    public static function getDefaultPriority(): int
     {
         return 7;
     }

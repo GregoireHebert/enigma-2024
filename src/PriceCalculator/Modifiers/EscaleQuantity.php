@@ -16,8 +16,8 @@ class EscaleQuantity implements ModifierInterface
         $price->value = (int) ($price->value + $cout);
     }
 
-    public function getPriority(): int
+    public static function getDefaultPriority(): int
     {
-        return 7;
+        return 9;
     }
 }

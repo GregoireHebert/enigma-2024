@@ -17,10 +17,10 @@ class Kernel extends BaseKernel
     {
         parent::build($container);
 
-        $container->registerForAutoconfiguration(ModifierInterface::class)
-            ->addTag('app.price_calculator.modifier');
+//        $container->registerForAutoconfiguration(ModifierInterface::class)
+//            ->addTag('app.price_calculator.modifier');
 
         $container->addCompilerPass(new TrajetCompiler());
-        $container->addCompilerPass(new PriceCalculatorCompiler());
+//        $container->addCompilerPass(new PriceCalculatorCompiler());
     }
 }
