@@ -13,7 +13,7 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
 #    _instanceof:
-#        App\PriceCalculator\Modifiers\ModifierInterface:
+#        App\Domain\PriceCalculator\Modifiers\ModifierInterface:
 #            tags: ['app.price_calculator.modifier']
 
     # makes classes in src/ available to be used as services
@@ -21,8 +21,8 @@ services:
     App\:
         resource: '../src/'
         exclude:
-            - '../src/DependencyInjection/'
-            - '../src/Entity/'
+            - '../src/Infrastructure/DependencyInjection/'
+            - '../src/Application/Entity/'
             - '../src/Kernel.php'
 
     # add more service definitions when explicit configuration is needed

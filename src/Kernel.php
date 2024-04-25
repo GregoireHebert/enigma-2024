@@ -2,9 +2,7 @@
 
 namespace App;
 
-use App\DependencyInjection\Compiler\PriceCalculatorCompiler;
-use App\DependencyInjection\Compiler\TrajetCompiler;
-use App\PriceCalculator\Modifiers\ModifierInterface;
+use App\Infrastructure\DependencyInjection\Compiler\TrajetCompiler;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel as BaseKernel;

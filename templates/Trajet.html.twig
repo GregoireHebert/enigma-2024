@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <dl>
+            <dt>Départ</dt>
+            <dd>{{ Trajet.depart.gare }}</dd>
+
+            <dt>Arrivée</dt>
+            <dd>{{ Trajet.arrivee.gare }}
+
+            <dt>Arrivée</dt>
+            <dd>{{ render(controller('App\\Infrastructure\\Controller\\Trajets\\Tarif', { 'id': Trajet.id })) }}</dd>
+
+            <dt>Arrêts</dt>
+            <dd>
+                <ul>
+                {% for arret in Trajet.arrets %}
+                    <li>{{ arret.gare }} (voie: {{ arret.voie }}) : {{ arret.horaire|date("d/m H:i") }}</li>
+                {% endfor %}
+                </ul>
+            </dd>
+        </dl>
+{% endblock %}
