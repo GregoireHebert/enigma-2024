@@ -6,7 +6,7 @@ namespace App\Models;
 
 use Symfony\Component\Uid\UuidV4;
 
-final class Trajet
+final class Trajet implements TrajetInterface
 {
     public readonly UuidV4 $id;
 
@@ -45,5 +45,10 @@ final class Trajet
     public function addEscale(Escale $escale): void
     {
         $this->escales[] = $escale;
+    }
+
+    public function getType(): Type
+    {
+        return $this->type;
     }
 }
